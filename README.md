@@ -11,25 +11,6 @@ Instructor: Prof. Yanwei Wang
 
 Both addresses serve the same website. Practice progress is saved separately for each address.
 
-## Publish on GitHub Pages
-
-This export includes the complete website, weekly course downloads, content tools, verification scripts and a GitHub Pages deployment workflow. Upload the contents of this folder to the repository root, keeping `dist/`, `tools/`, `tests/` and `.github/` together. In repository **Settings → Pages**, select **GitHub Actions** as the source. The workflow publishes `dist/` after a push to `main`.
-
-See [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md) for complete setup and update instructions.
-
-### Preview on your own computer
-
-The simplest preview is to open `dist/index.html` in a web browser; the site works directly from the file.
-
-To preview through a local web server instead, open a terminal in this folder and run the command for your system:
-
-| System | Command |
-| --- | --- |
-| Windows | `py -m http.server 8000 --directory dist` |
-| macOS / Linux | `python3 -m http.server 8000 --directory dist` |
-
-Then open <http://localhost:8000/> in a browser on the same computer, and keep the terminal open while browsing (Ctrl+C stops the server). This `localhost` address works only on your own computer while the server is running; it is not a link to the published site. In VS Code, the Live Server extension (right-click `dist/index.html` → **Open with Live Server**) works too. No install or build step is needed.
-
 ## Latest update
 
 This export matches published version 14. The Reading examples page now has an “About these examples” description and a separate “References and useful resources” section listing the two books and official learning/documentation links.
@@ -109,3 +90,11 @@ The site has no build step or runtime third-party JavaScript dependencies. `dist
 To run all maintenance checks, use Python 3.10 or later and Node.js, then install the optional Python packages with `python3 -m pip install -r requirements-dev.txt`. This export was checked using Python 3.12 and Node.js 24. The browser itself requires none of those Python packages.
 
 The exported website files match the checked source revision recorded in `SOURCE_VERSION.txt`. `SHA256SUMS` records the exported file hashes; regenerate it after editing if a current manifest is needed. Repository history, local caches, credentials and the original hosting-account configuration are not included.
+
+### Preview on your own computer
+
+Open `dist/index.html` in a browser; no server, install or build step is needed. To use a local server instead, run `py -m http.server 8000 --directory dist` (Windows) or `python3 -m http.server 8000 --directory dist` (macOS/Linux) from this folder, then open <http://localhost:8000/> on the same computer.
+
+### Publish on GitHub Pages
+
+The workflow in `.github/workflows/deploy-pages.yml` publishes `dist/` to GitHub Pages after each push to `main`; the repository's **Settings → Pages** source must be set to **GitHub Actions**. Keep `dist/`, `tools/`, `tests/` and `.github/` together at the repository root. See [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md) for complete setup and update instructions.
