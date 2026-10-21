@@ -1,0 +1,7 @@
+# Optional: needed for the full Python content/PDF verification suite.
+# Serving or publishing the website does not require Python packages.
+numpy
+matplotlib
+pandas
+scipy
+pypdf

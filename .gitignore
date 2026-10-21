@@ -1,0 +1,15 @@
+# Local development files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Account-specific hosting settings and original source archives
+/.openai/
+/private/
+/moodle-source/

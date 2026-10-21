@@ -1,0 +1,7 @@
+ENG 101 Practice Studio — GitHub export
+Published version: 14
+Source revision: 8575c67298cef1c52192e7f0d7a9d8ec9d3e9f8e
+Export date (UTC): 2026-10-21
+The website, tools and tests are byte-for-byte copies of the checked source.
+This version includes the revised Reading examples description and references.
+GitHub setup, workflow, requirements and documentation are export additions.
