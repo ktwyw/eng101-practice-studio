@@ -4,13 +4,31 @@ A static Python practice companion for Programming for Engineers, Fall 2026.
 
 Instructor: Prof. Yanwei Wang
 
+## Open the website
+
+- **Main site (the link shared with students):** <https://eng101-practice-studio.eager-melon-2769.chatgpt.site>
+- **GitHub Pages copy:** <https://ktwyw.github.io/eng101-practice-studio/>
+
+Both addresses serve the same website. Practice progress is saved separately for each address.
+
 ## Publish on GitHub Pages
 
 This export includes the complete website, weekly course downloads, content tools, verification scripts and a GitHub Pages deployment workflow. Upload the contents of this folder to the repository root, keeping `dist/`, `tools/`, `tests/` and `.github/` together. In repository **Settings → Pages**, select **GitHub Actions** as the source. The workflow publishes `dist/` after a push to `main`.
 
 See [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md) for complete setup and update instructions.
 
-For a local preview, run `python3 -m http.server 8000 --directory dist` from this folder and open <http://localhost:8000/>. No install or build step is needed to serve the website.
+### Preview on your own computer
+
+The simplest preview is to open `dist/index.html` in a web browser; the site works directly from the file.
+
+To preview through a local web server instead, open a terminal in this folder and run the command for your system:
+
+| System | Command |
+| --- | --- |
+| Windows | `py -m http.server 8000 --directory dist` |
+| macOS / Linux | `python3 -m http.server 8000 --directory dist` |
+
+Then open <http://localhost:8000/> in a browser on the same computer, and keep the terminal open while browsing (Ctrl+C stops the server). This `localhost` address works only on your own computer while the server is running; it is not a link to the published site. In VS Code, the Live Server extension (right-click `dist/index.html` → **Open with Live Server**) works too. No install or build step is needed.
 
 ## Latest update
 

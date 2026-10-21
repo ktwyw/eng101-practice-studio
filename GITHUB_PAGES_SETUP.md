@@ -62,13 +62,14 @@ Progress on the earlier hosted site does not transfer to this GitHub Pages addre
 
 ## Preview and update
 
-From the project root:
+The simplest preview is to open `dist/index.html` in a browser. To use a local server instead, run this from the project root (Windows: `py`; macOS/Linux: `python3`):
 
 ```sh
+py -m http.server 8000 --directory dist
 python3 -m http.server 8000 --directory dist
 ```
 
-Open <http://localhost:8000/>. Stop the server with Ctrl+C. Edit the files under `dist/`, check the changes, then commit and push to `main`; the supplied workflow publishes the updated site.
+Run only the line for your system, then open <http://localhost:8000/> on the same computer. Stop the server with Ctrl+C. Edit the files under `dist/`, check the changes, then commit and push to `main`; the supplied workflow publishes the updated site.
 
 For quick verification before pushing:
 
